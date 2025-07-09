@@ -57,6 +57,17 @@ Version      : 1.0
     box-shadow: none;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
+.scroller, .container, .row {
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+
 body {
     color: var(--text-color);
     background: var(--body-background);
@@ -1261,6 +1272,7 @@ html {
 }
 
 .hero-content h2 {
+    line-height: 1.1;
     font-weight: 500;
     font-size: 130px;
     text-transform: uppercase;
@@ -1276,10 +1288,9 @@ html {
 
 .hero-content img {
     width: 200px;
-    position: absolute;
-    right: 10%;
-    top: -30%;
-    z-index: -9;
+    position: static;
+    display: block;
+   /* margin: 0 auto 20px; */
     border-radius: 50%;
 }
 
