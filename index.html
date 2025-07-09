@@ -674,6 +674,55 @@
             </div>
         </div>
     </footer>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contactForm");
+    const successMsg = document.querySelector(".input-success");
+    const errorMsg = document.querySelector(".input-error");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      fetch("https://formsubmit.co/pro100java01@gmail.com", {
+        method: "POST",
+        body: formData
+      })
+      .then(response => {
+        if (response.ok) {
+          form.reset();
+          successMsg.style.display = "block";
+          errorMsg.style.display = "none";
+
+          // 5 soniyadan keyin yashirish:
+          setTimeout(() => {
+            successMsg.style.display = "none";
+          }, 5000);
+        } else {
+          successMsg.style.display = "none";
+          errorMsg.style.display = "block";
+
+          // Error yozuvini ham 5 soniyadan keyin yashirish
+          setTimeout(() => {
+            errorMsg.style.display = "none";
+          }, 5000);
+        }
+      })
+      .catch(() => {
+        successMsg.style.display = "none";
+        errorMsg.style.display = "block";
+
+        setTimeout(() => {
+          errorMsg.style.display = "none";
+        }, 5000);
+      });
+    });
+  });
+</script>
+
+
     <!-- / END FOOTER DESIGN AREA -->
     <!-- JQUERY JS -->
     <script src="assets/js/jquery-3.6.0.min.js"></script>
@@ -686,17 +735,17 @@
     <!-- MOBILE MENU JS-->
     <script src="assets/js/mobilemenu.js"></script>
     <!-- GSAP AND LOCOMOTIV JS-->
-    <script src="assets/js/gsap.min.js"></script>
-    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/gsap.min.js" defer></script>
+<!--    <script src="assets/js/ScrollTrigger.min.js"></script>-->
     <script src="assets/js/lenis.js"></script>
     <!-- SWIPPER JS-->
     <script src="assets/js/swiper-bundle.js"></script>
     <!-- NICE SELECT JS-->
     <script src="assets/js/jquery.nice-select.min.js"></script>
     <!-- IMAGE LOADER JS-->
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+<!--    <script src="assets/js/imagesloaded.pkgd.min.js"></script>-->
     <!-- ISOTOPE JS-->
-    <script src="assets/js/isotope.pkgd.min.js"></script>
+<!--    <script src="assets/js/isotope.pkgd.min.js"></script>-->
     <!--  WOW ANIMATION JS-->
     <script src="assets/js/wow.min.js"></script>
     <!-- SCRIPT JS-->
