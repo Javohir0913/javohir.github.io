@@ -454,7 +454,7 @@ function startPreloaderAnimation() {
 // ✅ 2.5 sekunddan keyin ishga tushadi (faqat 1 marta)
 setTimeout(() => {
     startPreloaderAnimation();
-}, 2500);
+}, 1500);
 
 
     /*
