@@ -417,7 +417,7 @@ Version      : 1.0
        When document is loaded, do
        ========================================================================== */
        
-    let preloaderStarted = false;
+let preloaderStarted = false;
 
 function startPreloaderAnimation() {
     if (preloaderStarted) return;
@@ -428,8 +428,8 @@ function startPreloaderAnimation() {
     const curve = "M0 502S175 272 500 272s500 230 500 230V0H0Z";
     const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
 
-    tl.to(".preloader-heading .load-text , .preloader-heading .cont", {
-        delay: 1.5,
+    tl.to(".preloader-heading .load-text", {
+        delay: 1,
         y: -100,
         opacity: 0,
     });
@@ -451,15 +451,10 @@ function startPreloaderAnimation() {
     });
 }
 
-// DOM tayyor bo‘lsa – ishga tushir
-document.addEventListener('DOMContentLoaded', function () {
-    startPreloaderAnimation();
-});
-
-// 3 soniyadan keyin baribir ishga tushsin
+// ✅ 2.5 sekunddan keyin ishga tushadi (faqat 1 marta)
 setTimeout(() => {
     startPreloaderAnimation();
-}, 3000);
+}, 2500);
 
 
     /*
