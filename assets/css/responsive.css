@@ -367,8 +367,8 @@ Version      : 1.0
     }
 
     .section-title h2 {
-        font-size: 50px;
-        line-height: 60px;
+        font-size: 35px;
+        line-height: 50px;
     }
 
     .hero-content .job {
@@ -532,6 +532,9 @@ Version      : 1.0
     .resume-wrapper .resume-box:last-child {
         margin-bottom: 0
     }
+    .meanmenu-reveal {
+    display: none !important;
+  }
 }
 
 

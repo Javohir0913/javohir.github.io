@@ -409,7 +409,6 @@ html {
     margin-bottom: 15px;
     font-size: 60px;
     line-height: 70px;
-    text-transform: uppercase;
     padding-bottom: 20px;
 }
 
@@ -1275,7 +1274,6 @@ html {
     line-height: 1.1;
     font-weight: 500;
     font-size: 130px;
-    text-transform: uppercase;
     text-align: center;
     color: var(--text-color);
 }
@@ -3633,3 +3631,4 @@ ul.blog_pagination li a:hover {
     color: var(--primary-color);
     margin-bottom: 30px;
 }
+

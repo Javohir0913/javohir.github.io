@@ -451,10 +451,10 @@ function startPreloaderAnimation() {
     });
 }
 
-// ✅ 2.5 sekunddan keyin ishga tushadi (faqat 1 marta)
+// ✅ 0.5 sekunddan keyin ishga tushadi (faqat 1 marta)
 setTimeout(() => {
     startPreloaderAnimation();
-}, 1500);
+}, 500);
 
 
     /*
