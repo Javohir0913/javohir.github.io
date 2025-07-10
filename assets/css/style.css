@@ -61,7 +61,16 @@ html, body {
   overflow-x: hidden;
 }
 
-.scroller, .container, .row {
+.scroller {
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    white-space: nowrap;
+    position: relative;
+}
+
+.container, .row {
+background-color: background: var(--black-color);;
   max-width: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
@@ -207,7 +216,7 @@ textarea,
     font-size: 20px;
     border-radius: 0;
     padding: 20px 0;
-    background-color: #fff;
+    background-color: #007aff;
     border-bottom: 1px solid var(--primary-color)
 }
 
@@ -471,7 +480,7 @@ html {
     color: var(--main-color);
     -webkit-transition: .3s;
     transition: .3s;
-    background: var(--black-color);
+    background: #007aff;
 }
 
 .theme-btn-two:hover {
@@ -1245,7 +1254,7 @@ html {
 }
 
 .main-hero-image-area {
-    background: url(../images/hero-image.jpg) no-repeat;
+    background: url(../images/hero-image.png) no-repeat;
     background-size: cover;
     z-index: 1;
     position: relative;
@@ -1678,7 +1687,7 @@ h2.about-pre-title {
 
 
 .service-item h5 {
-    background: var(--primary-color);
+    background: #007aff;
     margin-bottom: 60px;
     color: var(--black-color);
     font-family: var(--text-font);
