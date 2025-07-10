@@ -856,10 +856,6 @@ html {
     transition: all 500ms ease;
 }
 
-.logo img {
-    width: 70px;
-}
-
 .main-menu {
     text-align: right;
 }
@@ -3641,3 +3637,7 @@ ul.blog_pagination li a:hover {
     margin-bottom: 30px;
 }
 
+.logo img {
+    max-width: 210px; /* defaultdan kattaroq */
+    height: auto;
+}
