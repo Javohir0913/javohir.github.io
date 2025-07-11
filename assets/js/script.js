@@ -429,16 +429,16 @@ function startPreloaderAnimation() {
     const flat = "M0 2S175 1 500 1s500 1 500 1V0H0Z";
 
     tl.to(".preloader-heading .load-text", {
-        delay: 1,
+        delay: 0.5,
         y: -100,
         opacity: 0,
     });
     tl.to(svg, {
-        duration: 0.5,
+        duration: 0.3,
         attr: { d: curve },
         ease: "power2.easeIn",
     }).to(svg, {
-        duration: 0.5,
+        duration: 0.3,
         attr: { d: flat },
         ease: "power2.easeOut",
     });
@@ -446,15 +446,16 @@ function startPreloaderAnimation() {
         y: -1500,
     });
     tl.to(".preloader", {
+        duration: 0.5,
         zIndex: -1,
         display: "none",
     });
 }
 
-// ✅ 0.5 sekunddan keyin ishga tushadi (faqat 1 marta)
+// ✅ 0.1 sekunddan keyin ishga tushadi (faqat 1 marta)
 setTimeout(() => {
     startPreloaderAnimation();
-}, 500);
+}, 100);
 
 
     /*
